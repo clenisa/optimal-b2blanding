@@ -6,6 +6,8 @@ import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
 export default function Component() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  // Controls how much the logo is zoomed in without increasing canvas size
+  const ZOOM_FACTOR = 2
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -42,7 +44,7 @@ export default function Component() {
       ctx.fillStyle = "white"
       ctx.save()
 
-      const logoHeight = isMobile ? 80 : 160 // Increased size since it's the only logo
+      const logoHeight = (isMobile ? 80 : 160) * ZOOM_FACTOR // Zoomed size
       const logoWidth = logoHeight // The Optimal logo is square
 
       // Center the logo
