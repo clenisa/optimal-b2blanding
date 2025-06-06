@@ -1,11 +1,14 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
 
 export default function Component() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [reveal, setReveal] = useState(false)
   // Controls how much the logo is zoomed in without increasing canvas size
   const ZOOM_FACTOR = 2
 
@@ -162,22 +165,138 @@ export default function Component() {
 
     window.addEventListener("resize", handleResize)
 
+    const handleScroll = () => {
+      if (window.scrollY > 50) setReveal(true)
+    }
+    window.addEventListener("scroll", handleScroll)
+
     return () => {
       window.removeEventListener("resize", handleResize)
+      window.removeEventListener("scroll", handleScroll)
       cancelAnimationFrame(animationFrameId)
     }
   }, [isMobile])
 
   return (
-    <div className="relative w-full h-dvh flex flex-col items-center justify-center bg-black">
+    <div className="relative min-h-[200vh] bg-black text-white overflow-x-hidden">
       <canvas
         ref={canvasRef}
-        className="w-full h-full absolute top-0 left-0 touch-none"
+        className={`fixed inset-0 w-full h-screen touch-none transition-opacity duration-700 ${reveal ? 'opacity-0' : 'opacity-100'}`}
         aria-label="Floating Optimal logo particles"
       />
-      <div className="absolute bottom-[100px] text-center z-10">
-        <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm ">
-          keep up with{" "}
+
+      <header className="fixed top-0 inset-x-0 z-30">
+        <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm">
+          <div className="flex items-center gap-8">
+            <span className="font-bold text-lg">optimal</span>
+            <ul className="hidden md:flex items-center gap-6">
+              <li>
+                <a href="#" className="nav-item" data-section="products">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="solutions">
+                  Solutions
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="developers">
+                  Developers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="company">
+                  Company
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="pricing">
+                  Pricing
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="#" className="hidden md:inline hover:text-green-400">Login</a>
+            <Button variant="secondary" size="sm" className="border-green-500 text-green-400 hover:bg-green-500/20">
+              Contact Sales
+            </Button>
+            <Button size="sm" className="bg-green-500 text-black hover:bg-green-600">
+              Start Free Trial
+            </Button>
+          </div>
+        </nav>
+      </header>
+
+      <section
+        className={`fixed inset-0 flex flex-col items-center justify-center text-center z-10 px-6 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      >
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-4xl">
+          The Serverless Optimal Home
+        </h1>
+        <p className="text-gray-300 mt-4 max-w-2xl text-base sm:text-lg">
+          Intelligent automation that transforms houses into responsive, efficient, and delightful living spaces
+        </p>
+
+        <div className="hero-info-grid">
+          <div className="info-card">
+            <span className="info-label">SMART AUTOMATION</span>
+            <span className="info-value">Always On</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">ENERGY SAVINGS</span>
+            <span className="info-value">Up to 40%</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">SETUP TIME</span>
+            <span className="info-value">Under 1 Hour</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">MONTHLY COST</span>
+            <span className="info-value">Starting $99</span>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+          <Button size="lg" className="bg-green-500 text-black hover:bg-green-600">
+            Experience the Future
+          </Button>
+          <Button variant="outline" size="lg" className="border-gray-300 text-gray-300 hover:text-white">
+            See How It Works
+          </Button>
+        </div>
+        <form className="mt-6 flex w-full max-w-sm gap-2 justify-center">
+          <Input type="email" placeholder="Join newsletter" className="bg-gray-800 border-gray-700" />
+          <Button type="submit" variant="secondary" className="bg-green-600 text-black hover:bg-green-500">
+            Subscribe
+          </Button>
+        </form>
+      </section>
+
+      <div className="market-ticker fixed top-16 inset-x-0 z-20">
+        <div className="ticker-content">
+          <div className="ticker-item">
+            <span className="ticker-symbol">SMART</span>
+            <span className="ticker-price">$156.20</span>
+            <span className="ticker-change positive">+1.8%</span>
+          </div>
+          <div className="ticker-item">
+            <span className="ticker-symbol">IOT</span>
+            <span className="ticker-price">$89.75</span>
+            <span className="ticker-change negative">-0.5%</span>
+          </div>
+          <div className="ticker-item">
+            <span className="ticker-symbol">TSLA</span>
+            <span className="ticker-price">$248.50</span>
+            <span className="ticker-change positive">+2.4%</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-4 w-full text-center z-10">
+        <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm">
+          keep up with{' '}
           <a
             href="https://substack.com/@carloslenis"
             target="_blank"
@@ -185,7 +304,7 @@ export default function Component() {
             rel="noreferrer"
           >
             optimal
-          </a>{" "}
+          </a>{' '}
           <span>via the</span>
           <span className="transition-colors duration-300"> ceo's newsletter</span> <br />
           <a
