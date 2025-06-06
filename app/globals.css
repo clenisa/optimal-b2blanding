@@ -88,7 +88,94 @@ body {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+body {
+  @apply bg-background text-foreground;
+}
+}
+
+/* Navigation hover styles */
+.nav-item {
+  @apply transition-colors border-b-2 border-transparent pb-1;
+}
+.nav-item[data-section="products"]:hover {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+.nav-item[data-section="solutions"]:hover {
+  color: #f59e0b;
+  border-bottom-color: #f59e0b;
+}
+.nav-item[data-section="developers"]:hover {
+  color: #8b5cf6;
+  border-bottom-color: #8b5cf6;
+}
+.nav-item[data-section="company"]:hover {
+  color: #14b8a6;
+  border-bottom-color: #14b8a6;
+}
+.nav-item[data-section="pricing"]:hover {
+  color: #00ff00;
+  border-bottom-color: #00ff00;
+}
+
+/* Hero info cards */
+.hero-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 400px;
+}
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.info-label {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+.info-value {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00ff00;
+}
+
+/* Market ticker */
+.market-ticker {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  overflow: hidden;
+}
+.ticker-content {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 30s linear infinite;
+}
+.ticker-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  white-space: nowrap;
+}
+.ticker-change.positive {
+  color: #00ff00;
+}
+.ticker-change.negative {
+  color: #ef4444;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

@@ -183,11 +183,31 @@ export default function Component() {
           <div className="flex items-center gap-8">
             <span className="font-bold text-lg">optimal</span>
             <ul className="hidden md:flex items-center gap-6">
-              <li><a href="#" className="hover:text-green-400">Products</a></li>
-              <li><a href="#" className="hover:text-green-400">Solutions</a></li>
-              <li><a href="#" className="hover:text-green-400">Developers</a></li>
-              <li><a href="#" className="hover:text-green-400">Company</a></li>
-              <li><a href="#" className="hover:text-green-400">Pricing</a></li>
+              <li>
+                <a href="#" className="nav-item" data-section="products">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="solutions">
+                  Solutions
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="developers">
+                  Developers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="company">
+                  Company
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav-item" data-section="pricing">
+                  Pricing
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex items-center gap-3">
@@ -204,14 +224,34 @@ export default function Component() {
 
       <section className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-6">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-4xl">
-          Autonomous Infra for a Smarter Enterprise.
+          The Serverless Optimal Home
         </h1>
         <p className="text-gray-300 mt-4 max-w-2xl text-base sm:text-lg">
-          Serverless intelligence for orchestrating financial operations, compliance, and scalable automation.
+          Intelligent automation that transforms houses into responsive, efficient, and delightful living spaces
         </p>
+
+        <div className="hero-info-grid">
+          <div className="info-card">
+            <span className="info-label">SMART AUTOMATION</span>
+            <span className="info-value">Always On</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">ENERGY SAVINGS</span>
+            <span className="info-value">Up to 40%</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">SETUP TIME</span>
+            <span className="info-value">Under 1 Hour</span>
+          </div>
+          <div className="info-card">
+            <span className="info-label">MONTHLY COST</span>
+            <span className="info-value">Starting $99</span>
+          </div>
+        </div>
+
         <div className="mt-6 flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="bg-green-500 text-black hover:bg-green-600">
-            Experience the Platform
+            Experience the Future
           </Button>
           <Button variant="outline" size="lg" className="border-gray-300 text-gray-300 hover:text-white">
             See How It Works
@@ -224,6 +264,26 @@ export default function Component() {
           </Button>
         </form>
       </section>
+
+      <div className="market-ticker absolute bottom-24 inset-x-0 z-10">
+        <div className="ticker-content">
+          <div className="ticker-item">
+            <span className="ticker-symbol">SMART</span>
+            <span className="ticker-price">$156.20</span>
+            <span className="ticker-change positive">+1.8%</span>
+          </div>
+          <div className="ticker-item">
+            <span className="ticker-symbol">IOT</span>
+            <span className="ticker-price">$89.75</span>
+            <span className="ticker-change negative">-0.5%</span>
+          </div>
+          <div className="ticker-item">
+            <span className="ticker-symbol">TSLA</span>
+            <span className="ticker-price">$248.50</span>
+            <span className="ticker-change positive">+2.4%</span>
+          </div>
+        </div>
+      </div>
 
       <div className="absolute bottom-4 w-full text-center z-10">
         <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm">
