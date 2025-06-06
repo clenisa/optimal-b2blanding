@@ -15,8 +15,8 @@ body {
 @layer base {
   :root {
     --color-primary-black: #000000;
-    --color-primary-white: #ffffff;
-    --color-accent-green: #00ff00;
+    --color-primary-white: #f9fafb;
+    --color-accent-green: #4ade80;
     --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
     --color-gray-200: #e5e7eb;
@@ -67,8 +67,8 @@ body {
   }
   .dark {
     --color-primary-black: #000000;
-    --color-primary-white: #ffffff;
-    --color-accent-green: #00ff00;
+    --color-primary-white: #f9fafb;
+    --color-accent-green: #4ade80;
     --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
     --color-gray-200: #e5e7eb;
@@ -160,8 +160,8 @@ img:hover {
   border-bottom-color: #14b8a6;
 }
 .nav-item[data-section="pricing"]:hover {
-  color: #00ff00;
-  border-bottom-color: #00ff00;
+  color: var(--color-accent-green);
+  border-bottom-color: var(--color-accent-green);
 }
 
 /* Hero info cards */
@@ -190,7 +190,7 @@ img:hover {
   display: block;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #00ff00;
+  color: var(--color-accent-green);
 }
 
 /* Market ticker */
@@ -212,7 +212,7 @@ img:hover {
   white-space: nowrap;
 }
 .ticker-change.positive {
-  color: #00ff00;
+  color: var(--color-accent-green);
 }
 .ticker-change.negative {
   color: #ef4444;
