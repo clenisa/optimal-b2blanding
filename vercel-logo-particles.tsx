@@ -185,8 +185,7 @@ export default function Component() {
         aria-label="Floating Optimal logo particles"
       />
 
-      <header className={`fixed top-0 inset-x-0 z-30 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-      >
+      <header className="fixed top-0 inset-x-0 z-30">
         <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm">
           <div className="flex items-center gap-8">
             <span className="font-bold text-lg">optimal</span>
@@ -275,8 +274,7 @@ export default function Component() {
         </form>
       </section>
 
-      <div className={`market-ticker fixed top-16 inset-x-0 z-20 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-      >
+      <div className="market-ticker fixed top-16 inset-x-0 z-20">
         <div className="ticker-content">
           <div className="ticker-item">
             <span className="ticker-symbol">SMART</span>
