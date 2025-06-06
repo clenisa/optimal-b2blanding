@@ -218,11 +218,22 @@ export default function Component() {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <a href="#" className="hidden md:inline hover:text-green-400">Login</a>
-            <Button variant="secondary" size="sm" className="border-green-500 text-green-400 hover:bg-green-500/20">
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="hidden md:inline px-4"
+            >
+              <a href="#">Login</a>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-[--color-accent-green] text-[--color-accent-green] hover:bg-[--color-accent-green]/10"
+            >
               Contact Sales
             </Button>
-            <Button size="sm" className="bg-green-500 text-black hover:bg-green-600">
+            <Button variant="accent" size="sm">
               Start Free Trial
             </Button>
           </div>
@@ -259,16 +270,16 @@ export default function Component() {
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-green-500 text-black hover:bg-green-600">
+          <Button size="sm" variant="default">
             Experience the Future
           </Button>
-          <Button variant="outline" size="lg" className="border-gray-300 text-gray-300 hover:text-white">
+          <Button variant="secondary" size="sm">
             See How It Works
           </Button>
         </div>
         <form className="mt-6 flex w-full max-w-sm gap-2 justify-center">
           <Input type="email" placeholder="Join newsletter" className="bg-gray-800 border-gray-700" />
-          <Button type="submit" variant="secondary" className="bg-green-600 text-black hover:bg-green-500">
+          <Button type="submit" variant="accent" size="sm">
             Subscribe
           </Button>
         </form>
