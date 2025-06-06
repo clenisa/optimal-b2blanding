@@ -1,6 +1,8 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
 
 export default function Component() {
@@ -169,15 +171,63 @@ export default function Component() {
   }, [isMobile])
 
   return (
-    <div className="relative w-full h-dvh flex flex-col items-center justify-center bg-black">
+    <div className="relative w-full h-dvh bg-black text-white overflow-hidden">
       <canvas
         ref={canvasRef}
-        className="w-full h-full absolute top-0 left-0 touch-none"
+        className="w-full h-full absolute inset-0 touch-none"
         aria-label="Floating Optimal logo particles"
       />
-      <div className="absolute bottom-[100px] text-center z-10">
-        <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm ">
-          keep up with{" "}
+
+      <header className="absolute top-0 inset-x-0 z-20">
+        <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm">
+          <div className="flex items-center gap-8">
+            <span className="font-bold text-lg">optimal</span>
+            <ul className="hidden md:flex items-center gap-6">
+              <li><a href="#" className="hover:text-green-400">Products</a></li>
+              <li><a href="#" className="hover:text-green-400">Solutions</a></li>
+              <li><a href="#" className="hover:text-green-400">Developers</a></li>
+              <li><a href="#" className="hover:text-green-400">Company</a></li>
+              <li><a href="#" className="hover:text-green-400">Pricing</a></li>
+            </ul>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="#" className="hidden md:inline hover:text-green-400">Login</a>
+            <Button variant="secondary" size="sm" className="border-green-500 text-green-400 hover:bg-green-500/20">
+              Contact Sales
+            </Button>
+            <Button size="sm" className="bg-green-500 text-black hover:bg-green-600">
+              Start Free Trial
+            </Button>
+          </div>
+        </nav>
+      </header>
+
+      <section className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-6">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-4xl">
+          Autonomous Infra for a Smarter Enterprise.
+        </h1>
+        <p className="text-gray-300 mt-4 max-w-2xl text-base sm:text-lg">
+          Serverless intelligence for orchestrating financial operations, compliance, and scalable automation.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+          <Button size="lg" className="bg-green-500 text-black hover:bg-green-600">
+            Experience the Platform
+          </Button>
+          <Button variant="outline" size="lg" className="border-gray-300 text-gray-300 hover:text-white">
+            See How It Works
+          </Button>
+        </div>
+        <form className="mt-6 flex w-full max-w-sm gap-2 justify-center">
+          <Input type="email" placeholder="Join newsletter" className="bg-gray-800 border-gray-700" />
+          <Button type="submit" variant="secondary" className="bg-green-600 text-black hover:bg-green-500">
+            Subscribe
+          </Button>
+        </form>
+      </section>
+
+      <div className="absolute bottom-4 w-full text-center z-10">
+        <p className="font-mono text-gray-400 text-xs sm:text-base md:text-sm">
+          keep up with{' '}
           <a
             href="https://substack.com/@carloslenis"
             target="_blank"
@@ -185,7 +235,7 @@ export default function Component() {
             rel="noreferrer"
           >
             optimal
-          </a>{" "}
+          </a>{' '}
           <span>via the</span>
           <span className="transition-colors duration-300"> ceo's newsletter</span> <br />
           <a
