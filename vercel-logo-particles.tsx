@@ -8,6 +8,7 @@ import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
 export default function Component() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [reveal, setReveal] = useState(false)
   // Controls how much the logo is zoomed in without increasing canvas size
   const ZOOM_FACTOR = 2
 
@@ -164,21 +165,28 @@ export default function Component() {
 
     window.addEventListener("resize", handleResize)
 
+    const handleScroll = () => {
+      if (window.scrollY > 50) setReveal(true)
+    }
+    window.addEventListener("scroll", handleScroll)
+
     return () => {
       window.removeEventListener("resize", handleResize)
+      window.removeEventListener("scroll", handleScroll)
       cancelAnimationFrame(animationFrameId)
     }
   }, [isMobile])
 
   return (
-    <div className="relative w-full h-dvh bg-black text-white overflow-hidden">
+    <div className="relative min-h-[200vh] bg-black text-white overflow-x-hidden">
       <canvas
         ref={canvasRef}
-        className="w-full h-full absolute inset-0 touch-none"
+        className={`fixed inset-0 w-full h-screen touch-none transition-opacity duration-700 ${reveal ? 'opacity-0' : 'opacity-100'}`}
         aria-label="Floating Optimal logo particles"
       />
 
-      <header className="absolute top-0 inset-x-0 z-20">
+      <header className={`fixed top-0 inset-x-0 z-30 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      >
         <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm">
           <div className="flex items-center gap-8">
             <span className="font-bold text-lg">optimal</span>
@@ -222,7 +230,9 @@ export default function Component() {
         </nav>
       </header>
 
-      <section className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-6">
+      <section
+        className={`fixed inset-0 flex flex-col items-center justify-center text-center z-10 px-6 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      >
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold max-w-4xl">
           The Serverless Optimal Home
         </h1>
@@ -265,7 +275,8 @@ export default function Component() {
         </form>
       </section>
 
-      <div className="market-ticker absolute bottom-24 inset-x-0 z-10">
+      <div className={`market-ticker fixed top-16 inset-x-0 z-20 transition-opacity duration-700 ${reveal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      >
         <div className="ticker-content">
           <div className="ticker-item">
             <span className="ticker-symbol">SMART</span>
