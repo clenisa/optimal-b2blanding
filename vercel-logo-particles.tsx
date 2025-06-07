@@ -4,6 +4,39 @@ import { useRef, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
+import { cn } from "@/lib/utils"
+
+function LoginCycleButton() {
+  const [showStart, setShowStart] = useState(false)
+  useEffect(() => {
+    const id = setInterval(() => setShowStart(s => !s), 4000)
+    return () => clearInterval(id)
+  }, [])
+  return (
+    <Button
+      variant="accent"
+      size="sm"
+      className="min-w-[8rem] px-6 rounded-md cycle-colors font-bold relative overflow-hidden"
+    >
+      <span
+        className={cn(
+          "transition-opacity",
+          showStart ? "opacity-0" : "opacity-100"
+        )}
+      >
+        Login
+      </span>
+      <span
+        className={cn(
+          "absolute inset-0 flex items-center justify-center transition-opacity",
+          showStart ? "opacity-100" : "opacity-0"
+        )}
+      >
+        Start Free
+      </span>
+    </Button>
+  )
+}
 
 export default function Component() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -186,7 +219,7 @@ export default function Component() {
       />
 
       <header className="fixed top-0 inset-x-0 z-30">
-        <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm">
+        <nav className="max-w-6xl mx-auto flex items-center justify-between p-4 text-sm font-mono">
           <div className="flex items-center gap-8">
             <span className="font-bold text-lg">optimal</span>
             <ul className="hidden md:flex items-center gap-6">
@@ -218,13 +251,7 @@ export default function Component() {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <a href="#" className="hidden md:inline hover:text-green-400">Login</a>
-            <Button variant="secondary" size="sm" className="border-green-500 text-green-400 hover:bg-green-500/20">
-              Contact Sales
-            </Button>
-            <Button size="sm" className="bg-green-500 text-black hover:bg-green-600">
-              Start Free Trial
-            </Button>
+            <LoginCycleButton />
           </div>
         </nav>
       </header>
@@ -258,23 +285,15 @@ export default function Component() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-green-500 text-black hover:bg-green-600">
-            Experience the Future
-          </Button>
-          <Button variant="outline" size="lg" className="border-gray-300 text-gray-300 hover:text-white">
-            See How It Works
-          </Button>
-        </div>
         <form className="mt-6 flex w-full max-w-sm gap-2 justify-center">
           <Input type="email" placeholder="Join newsletter" className="bg-gray-800 border-gray-700" />
-          <Button type="submit" variant="secondary" className="bg-green-600 text-black hover:bg-green-500">
+          <Button type="submit" variant="accent" size="sm">
             Subscribe
           </Button>
         </form>
       </section>
 
-      <div className="market-ticker fixed top-16 inset-x-0 z-20">
+      <div className="market-ticker fixed top-16 inset-x-0 z-20 font-mono">
         <div className="ticker-content">
           <div className="ticker-item">
             <span className="ticker-symbol">SMART</span>
