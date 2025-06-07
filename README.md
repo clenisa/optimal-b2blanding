@@ -28,3 +28,19 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## Development
+
+Install dependencies and start the dev server using [pnpm](https://pnpm.io/):
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Run the linter and create a production build with:
+
+```bash
+pnpm lint
+pnpm build
+```
