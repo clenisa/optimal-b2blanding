@@ -7,7 +7,23 @@ body {
 }
 
 :root {
-  --color-accent-green: #4ade80;
+  --color-primary-black: #000000;
+  --color-primary-white: #ffffff;
+  --color-accent-green: #00ff00;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
   --background: 0 0% 100%;
   --foreground: 0 0% 0%;
 }
@@ -19,6 +35,71 @@ body {
 }
 
 
+}
+
+/* Rainbow ring animation */
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.rainbow-ring {
+  position: relative;
+  z-index: 0;
+}
+.rainbow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    #f87171,
+    #facc15,
+    #4ade80,
+    #60a5fa,
+    #a78bfa,
+    #f472b6,
+    #f87171
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin 4s linear infinite;
+  z-index: -1;
+}
+
+/* Interactive elements */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-accent-green);
+}
+
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Navigation links */
+.nav-item {
+  transition: color 0.2s ease, transform 0.2s ease;
+  color: var(--color-gray-300);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.nav-item:hover {
+  color: var(--color-accent-green);
+  transform: translateY(-1px);
+  border-bottom-color: var(--color-accent-green);
 }
 
 /* Market ticker styles */

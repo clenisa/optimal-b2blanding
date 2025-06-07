@@ -17,9 +17,9 @@ function LoginCycleButton() {
       asChild
       variant="accent"
       size="sm"
-      className="min-w-[8rem] px-6 rounded-lg cycle-colors font-bold relative overflow-hidden"
+      className="min-w-[8rem] px-6 rounded-lg cycle-colors rainbow-ring font-bold relative overflow-hidden"
     >
-      <a href="https://op-hub.com">
+      <a href="https://op-hub.com" aria-label="Login to Optimal">
       <span
         className={cn(
           "transition-opacity",
