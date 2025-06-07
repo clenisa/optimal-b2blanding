@@ -18,13 +18,7 @@ body {
   }
 }
 
-@keyframes cycle-colors {
-  0%, 100% { background-color: var(--color-accent-green); }
-  50% { background-color: #3b82f6; }
-}
 
-.cycle-colors {
-  animation: cycle-colors 4s linear infinite;
 }
 
 /* Market ticker styles */

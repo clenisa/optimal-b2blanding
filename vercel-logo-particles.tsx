@@ -254,7 +254,7 @@ export default function Component() {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <LoginCycleButton />
+
           </div>
         </nav>
       </header>
