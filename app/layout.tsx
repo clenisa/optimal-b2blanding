@@ -1,10 +1,10 @@
-import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Optimal Logo Particles",
-  description: "Animated logo particles for embedding",
-    generator: 'v0.dev'
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.dev',
 }
 
 export default function RootLayout({
@@ -14,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, padding: 0, width: "100%", height: "100%" }}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
-
-
-import './globals.css'
