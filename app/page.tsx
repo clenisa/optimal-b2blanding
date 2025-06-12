@@ -1,6 +1,9 @@
-// Update the import path to match the new file name
-import Component from "../vercel-logo-particles"
+import LogoParticles from "../logo-particles"
 
-export default function SyntheticV0PageForDeployment() {
-  return <Component />
+export default function Page() {
+  return (
+    <div className="w-full h-screen" style={{ minHeight: "100vh" }}>
+      <LogoParticles />
+    </div>
+  )
 }
