@@ -232,13 +232,13 @@ export default function Component() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <a href="https://beta.op-hub.com" className="btn-ghost" aria-label="Access beta version">
-              <em>beta</em>
+            <a href="https://substack.com/@carloslenis" className="btn-ghost" aria-label="Access blog">
+              <em>blog</em>
             </a>
             <a href="https://legacy.op-hub.com" className="btn-waitlist px-4 py-2 text-sm">
               legacy app
             </a>
-            <a href="https://app.op-hub.com" className="btn-cta px-4 py-2 text-sm">
+            <a href="https://www.carloslenis.com/" className="btn-cta px-4 py-2 text-sm">
               <span>start budgeting</span>
             </a>
           </div>
