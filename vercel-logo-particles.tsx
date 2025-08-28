@@ -238,7 +238,7 @@ export default function Component() {
             <a href="https://legacy.op-hub.com" className="btn-waitlist px-4 py-2 text-sm">
               legacy app
             </a>
-            <a href="https://app.op-hub.com" className="btn-cta px-4 py-2 text-sm">
+            <a href="https://www.carloslenis.com/" className="btn-cta px-4 py-2 text-sm">
               <span>start budgeting</span>
             </a>
           </div>
