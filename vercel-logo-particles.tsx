@@ -217,16 +217,16 @@ export default function Component() {
               <div className="nav-brand font-bold text-xl">optimal</div>
               <div className="nav-dropdown">
                 <a href="#budgeting" className="nav-dropdown-item">
-                  budgeting
+                  Features
                 </a>
                 <a href="#community" className="nav-dropdown-item">
-                  community
+                  Community
                 </a>
                 <a href="#tools" className="nav-dropdown-item">
-                  tools
+                  Dashboard
                 </a>
                 <a href="#about" className="nav-dropdown-item">
-                  about
+                  About
                 </a>
               </div>
             </div>
@@ -236,10 +236,10 @@ export default function Component() {
               <em>blog</em>
             </a>
             <a href="https://legacy.op-hub.com" className="btn-waitlist px-4 py-2 text-sm">
-              legacy app
+              See Live Demo
             </a>
             <a href="https://www.carloslenis.com/" className="btn-cta px-4 py-2 text-sm">
-              <span>start budgeting</span>
+              <span>Get Started for Free</span>
             </a>
           </div>
         </nav>
@@ -254,13 +254,24 @@ export default function Component() {
             className="font-mono text-sm sm:text-base animate-pulse-subtle"
             style={{ color: "var(--tva-white-muted)" }}
           >
-            **scroll to learn about us!**
+            Discover your AI-powered financial assistant
           </p>
         </div>
       </div>
 
       {/* Content sections - positioned to allow scrolling */}
       <div style={{ paddingTop: "100vh" }}>
+        {/* Hero content (headline & sub-headline) */}
+        <section className="relative z-20 py-20 px-6 text-center" style={{ backgroundColor: "var(--tva-black)" }}>
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6" style={{ color: "var(--tva-white)" }}>
+              Your Personal AI Financial Assistant
+            </h1>
+            <p className="text-xl sm:text-2xl max-w-3xl mx-auto" style={{ color: "var(--tva-white-muted)" }}>
+              Go beyond budgeting. Upload your financial data and let our AI-powered dashboard reveal insights, track your spending, and guide you towards your financial goals.
+            </p>
+          </div>
+        </section>
         {/* Budgeting Section */}
         <section
           id="budgeting"
@@ -270,42 +281,36 @@ export default function Component() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                budgeting that actually <span style={{ color: "var(--optimal-blue)" }}>works</span>
+                AI-Powered Financial <span style={{ color: "var(--optimal-blue)" }}>Intelligence</span>
               </h2>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: "var(--tva-white-muted)" }}>
-                forget boring spreadsheets and guilt trips. our ai-powered system learns your habits and helps you win
-                with money while still living your best life
+                Upload your financial data, visualize trends, and get actionable insights—powered by Optimal's AI dashboard.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="card-minimal p-8 rounded-2xl">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>
-                  smart tracking
-                </h3>
+            <div className="features-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="feature-item card-minimal p-8 rounded-2xl">
+                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Smart Data Import</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  connects to your accounts and categorizes everything automatically. no manual entry, no headaches.
+                  Upload CSV files and let our intelligent parser automatically categorize your transactions with advanced validation.
                 </p>
               </div>
-
-              <div className="card-minimal p-8 rounded-2xl">
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>
-                  goal crushing
-                </h3>
+              <div className="feature-item card-minimal p-8 rounded-2xl">
+                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Interactive Visualizations</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  set goals that matter to you. vacation? new car? house? we'll show you exactly how to get there.
+                  Track spending trends, monitor account balances, and analyze your financial health with dynamic charts and graphs.
                 </p>
               </div>
-
-              <div className="card-minimal p-8 rounded-2xl">
-                <div className="text-4xl mb-4">💡</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>
-                  real insights
-                </h3>
+              <div className="feature-item card-minimal p-8 rounded-2xl">
+                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>AI Financial Assistant</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  get personalized tips that actually make sense for your lifestyle. no generic advice here.
+                  Chat with your finances in plain English. Get personalized insights, budget recommendations, and spending pattern analysis.
+                </p>
+              </div>
+              <div className="feature-item card-minimal p-8 rounded-2xl">
+                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Multi-Account Tracking</h3>
+                <p style={{ color: "var(--tva-white-muted)" }}>
+                  Connect all your payment sources in one dashboard for a complete view of your financial landscape.
                 </p>
               </div>
             </div>
