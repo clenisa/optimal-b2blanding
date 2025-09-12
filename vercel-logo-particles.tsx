@@ -254,7 +254,7 @@ export default function Component() {
             className="font-mono text-sm sm:text-base animate-pulse-subtle"
             style={{ color: "var(--tva-white-muted)" }}
           >
-            Discover your AI-powered financial assistant
+            Transform Your Financial Future with AI
           </p>
         </div>
       </div>
@@ -265,10 +265,10 @@ export default function Component() {
         <section className="relative z-20 py-20 px-6 text-center" style={{ backgroundColor: "var(--tva-black)" }}>
           <div className="max-w-5xl mx-auto">
             <h1 className="text-5xl sm:text-6xl font-bold mb-6" style={{ color: "var(--tva-white)" }}>
-              Your Personal AI Financial Assistant
+              The Intelligent Financial Dashboard That Grows With You
             </h1>
             <p className="text-xl sm:text-2xl max-w-3xl mx-auto" style={{ color: "var(--tva-white-muted)" }}>
-              Go beyond budgeting. Upload your financial data and let our AI-powered dashboard reveal insights, track your spending, and guide you towards your financial goals.
+              Upload your financial data and unlock powerful insights. Our AI-driven platform transforms complex financial information into clear, actionable intelligence that helps you make smarter money decisions.
             </p>
           </div>
         </section>
@@ -281,10 +281,10 @@ export default function Component() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                AI-Powered Financial <span style={{ color: "var(--optimal-blue)" }}>Intelligence</span>
+                Advanced Financial <span style={{ color: "var(--optimal-blue)" }}>Analytics</span>
               </h2>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: "var(--tva-white-muted)" }}>
-                Upload your financial data, visualize trends, and get actionable insights—powered by Optimal's AI dashboard.
+                Experience the next generation of financial management. Our platform combines intelligent data processing with sophisticated visualization tools to give you unprecedented control over your financial life.
               </p>
             </div>
 
@@ -292,25 +292,25 @@ export default function Component() {
               <div className="feature-item card-minimal p-8 rounded-2xl">
                 <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Smart Data Import</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  Upload CSV files and let our intelligent parser automatically categorize your transactions with advanced validation.
+                  Seamlessly import your financial data through our intelligent CSV processor. Advanced validation ensures accuracy while automatic categorization saves you hours of manual work.
                 </p>
               </div>
               <div className="feature-item card-minimal p-8 rounded-2xl">
                 <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Interactive Visualizations</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  Track spending trends, monitor account balances, and analyze your financial health with dynamic charts and graphs.
+                  Visualize your financial story through interactive charts and real-time analytics. Track spending patterns, monitor account performance, and identify opportunities for optimization.
                 </p>
               </div>
               <div className="feature-item card-minimal p-8 rounded-2xl">
                 <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>AI Financial Assistant</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  Chat with your finances in plain English. Get personalized insights, budget recommendations, and spending pattern analysis.
+                  Ask questions about your finances in natural language and receive intelligent, personalized recommendations. Our AI assistant analyzes your spending patterns to provide actionable insights for better financial decisions.
                 </p>
               </div>
               <div className="feature-item card-minimal p-8 rounded-2xl">
                 <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Multi-Account Tracking</h3>
                 <p style={{ color: "var(--tva-white-muted)" }}>
-                  Connect all your payment sources in one dashboard for a complete view of your financial landscape.
+                  Consolidate all your financial accounts into a single, comprehensive dashboard. Monitor balances, track transactions, and maintain complete visibility across your entire financial ecosystem.
                 </p>
               </div>
             </div>
@@ -322,11 +322,10 @@ export default function Component() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                join the <span style={{ color: "var(--optimal-blue)" }}>optimal community</span>
+                Join the <span style={{ color: "var(--optimal-blue)" }}>Optimal Community</span>
               </h2>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: "var(--tva-white-muted)" }}>
-                connect with 12,500+ members who are all about that financial growth mindset. share wins, get advice,
-                level up together.
+                Connect with thousands of users who are transforming their financial lives. Share insights, learn from others, and accelerate your journey toward financial optimization.
               </p>
             </div>
 
@@ -338,15 +337,13 @@ export default function Component() {
                       className="w-12 h-12 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: "rgba(0, 188, 212, 0.2)" }}
                     >
-                      <span style={{ color: "var(--optimal-blue)" }} className="text-xl">
-                        💬
-                      </span>
+                      {/* icon intentionally removed for professional tone */}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                        daily check-ins
+                        Daily Insights
                       </h3>
-                      <p style={{ color: "var(--tva-white-muted)" }}>share your wins, get support when you need it</p>
+                      <p style={{ color: "var(--tva-white-muted)" }}>Share your progress and learn from community insights</p>
                     </div>
                   </div>
 
@@ -355,15 +352,13 @@ export default function Component() {
                       className="w-12 h-12 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: "rgba(0, 188, 212, 0.2)" }}
                     >
-                      <span style={{ color: "var(--optimal-blue)" }} className="text-xl">
-                        🏆
-                      </span>
+                      {/* icon intentionally removed for professional tone */}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                        challenges & rewards
+                        Financial Challenges
                       </h3>
-                      <p style={{ color: "var(--tva-white-muted)" }}>gamified savings challenges with real prizes</p>
+                      <p style={{ color: "var(--tva-white-muted)" }}>Participate in structured financial challenges designed to build lasting habits</p>
                     </div>
                   </div>
 
@@ -372,15 +367,13 @@ export default function Component() {
                       className="w-12 h-12 rounded-full flex items-center justify-center"
                       style={{ backgroundColor: "rgba(0, 188, 212, 0.2)" }}
                     >
-                      <span style={{ color: "var(--optimal-blue)" }} className="text-xl">
-                        📚
-                      </span>
+                      {/* icon intentionally removed for professional tone */}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                        exclusive content
+                        Expert Resources
                       </h3>
-                      <p style={{ color: "var(--tva-white-muted)" }}>weekly masterclasses from financial experts</p>
+                      <p style={{ color: "var(--tva-white-muted)" }}>Access exclusive content and masterclasses from financial professionals</p>
                     </div>
                   </div>
                 </div>
@@ -395,16 +388,12 @@ export default function Component() {
                     <div className="flex items-start gap-3 mb-3">
                       <div className="testimonial-avatar">S</div>
                       <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>
-                          sarah, 24
-                        </p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>
-                          marketing coordinator
-                        </p>
+                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Sarah, 24</p>
+                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Marketing Coordinator</p>
                       </div>
                     </div>
                     <p style={{ color: "var(--tva-white)" }}>
-                      "saved $3k in 2 months without feeling restricted at all 🔥"
+                      "Saved $3,000 in two months by identifying spending patterns I never noticed before."
                     </p>
                   </div>
 
@@ -412,16 +401,12 @@ export default function Component() {
                     <div className="flex items-start gap-3 mb-3">
                       <div className="testimonial-avatar">M</div>
                       <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>
-                          marcus, 28
-                        </p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>
-                          software engineer
-                        </p>
+                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Marcus, 28</p>
+                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Software Engineer</p>
                       </div>
                     </div>
                     <p style={{ color: "var(--tva-white)" }}>
-                      "finally understand where my money goes. game changer fr"
+                      "Finally have complete visibility into my spending habits. The insights have been transformative."
                     </p>
                   </div>
 
@@ -429,16 +414,12 @@ export default function Component() {
                     <div className="flex items-start gap-3 mb-3">
                       <div className="testimonial-avatar">A</div>
                       <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>
-                          alex, 26
-                        </p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>
-                          graphic designer
-                        </p>
+                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Alex, 26</p>
+                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Graphic Designer</p>
                       </div>
                     </div>
                     <p style={{ color: "var(--tva-white)" }}>
-                      "the community support hits different. we all winning together"
+                      "The community support has been invaluable. We're all working toward better financial futures together."
                     </p>
                   </div>
                 </div>
@@ -451,66 +432,57 @@ export default function Component() {
         <section id="tools" className="relative z-20 py-20 px-6" style={{ backgroundColor: "var(--tva-grey-dark)" }}>
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              tools that <span style={{ color: "var(--optimal-blue)" }}>actually help</span>
+              Built for <span style={{ color: "var(--optimal-blue)" }}>Modern Financial Management</span>
             </h2>
             <p className="text-xl max-w-3xl mx-auto mb-16" style={{ color: "var(--tva-white-muted)" }}>
-              built for the modern generation. clean, simple, effective.
+              Designed with modern users in mind. Our platform combines powerful functionality with intuitive design.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="card-minimal p-6 rounded-2xl">
-                <div className="text-3xl mb-4">📱</div>
                 <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  mobile first
+                  Mobile Optimized
                 </h3>
                 <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  manage everything from your phone
+                  Full functionality across all devices with responsive design
                 </p>
               </div>
 
               <div className="card-minimal p-6 rounded-2xl">
-                <div className="text-3xl mb-4">🤖</div>
                 <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  ai insights
+                  AI-Powered Insights
                 </h3>
                 <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  personalized recommendations
+                  Intelligent recommendations tailored to your financial goals
                 </p>
               </div>
 
               <div className="card-minimal p-6 rounded-2xl">
-                <div className="text-3xl mb-4">🔒</div>
                 <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  bank level security
+                  Enterprise Security
                 </h3>
                 <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  your data stays protected
+                  Your financial data is protected with enterprise-grade security
                 </p>
               </div>
 
               <div className="card-minimal p-6 rounded-2xl">
-                <div className="text-3xl mb-4">⚡</div>
                 <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  instant sync
+                  Real-Time Sync
                 </h3>
                 <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  real-time updates across devices
+                  Seamless synchronization across all your devices
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Meet the Team Section */}
+        {/* About Optimal Section */}
         <section id="team" className="relative z-20 py-20 px-6" style={{ backgroundColor: "var(--tva-black)" }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                meet the <span style={{ color: "var(--optimal-blue)" }}>team</span>
-              </h2>
-              <p className="text-xl" style={{ color: "var(--tva-white-muted)" }}>
-                the minds behind optimal
-              </p>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6">About Optimal</h2>
             </div>
 
             <div className="max-w-md mx-auto">
@@ -523,8 +495,7 @@ export default function Component() {
                   CEO & Founder
                 </p>
                 <p className="leading-relaxed mb-6" style={{ color: "var(--tva-white-muted)" }}>
-                  Carlos writes the optimal newsletter on Substack, sharing insights on productivity, finance, and
-                  living optimally. His weekly posts reach thousands of readers looking to level up their lives.
+                  Carlos founded Optimal to democratize sophisticated financial tools. Through his newsletter and platform, he helps thousands of users optimize their financial lives through data-driven insights and intelligent automation.
                 </p>
                 <a
                   href="https://substack.com/@carloslenis"
@@ -571,26 +542,23 @@ export default function Component() {
           </div>
         </section>
 
-        {/* About Section */}
+        {/* Mission Section */}
         <section id="about" className="relative z-20 py-20 px-6" style={{ backgroundColor: "var(--tva-grey-dark)" }}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              why <span style={{ color: "var(--optimal-blue)" }}>optimal</span> exists
-            </h2>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">Our Mission</h2>
             <p className="text-xl leading-relaxed mb-8" style={{ color: "var(--tva-white)" }}>
-              we're here to make tools to help you live more optimal! join optimal! budgeting optimal.
+              Optimal exists to make sophisticated financial management accessible to everyone. We believe that with the right tools and insights, anyone can take control of their financial future.
             </p>
             <p className="text-lg leading-relaxed mb-12" style={{ color: "var(--tva-white-muted)" }}>
-              optimal is for the ambitious, the dreamers, the ones who want more but don't want to sacrifice everything
-              to get there. we're here to help you win with money while still being you.
+              Our platform is designed for ambitious individuals who want to optimize their finances without sacrificing their lifestyle or values.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-cta text-lg px-8 py-4">
-                <span>start your optimal journey</span>
+                <span>Start Your Financial Transformation</span>
               </button>
               <Button variant="outline" size="lg" className="btn-secondary text-lg px-8 py-4 rounded-lg">
-                learn more about us
+                Explore the Platform
               </Button>
             </div>
           </div>
