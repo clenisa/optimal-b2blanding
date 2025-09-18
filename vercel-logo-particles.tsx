@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
 import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
 
 export default function Component() {
@@ -546,41 +545,10 @@ export default function Component() {
         <section id="about" className="relative z-20 py-20 px-6" style={{ backgroundColor: "var(--tva-grey-dark)" }}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Our Mission</h2>
-            <p className="text-xl leading-relaxed mb-8" style={{ color: "var(--tva-white)" }}>
-              Optimal exists to make sophisticated financial management accessible to everyone. We believe that with the right tools and insights, anyone can take control of their financial future.
-            </p>
-            <p className="text-lg leading-relaxed mb-12" style={{ color: "var(--tva-white-muted)" }}>
-              Our platform is designed for ambitious individuals who want to optimize their finances without sacrificing their lifestyle or values.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-cta text-lg px-8 py-4">
-                <span>Start Your Financial Transformation</span>
-              </button>
-              <Button variant="outline" size="lg" className="btn-secondary text-lg px-8 py-4 rounded-lg">
-                Explore the Platform
-              </Button>
-            </div>
           </div>
         </section>
       </div>
-
-      <footer className="relative z-10 py-8 text-center">
-        <p className="font-mono text-xs sm:text-base md:text-sm" style={{ color: "var(--tva-white-muted)" }}>
-          keep up with{" "}
-          <a
-            href="https://substack.com/@carloslenis"
-            target="_blank"
-            className="transition-colors duration-300 hover:text-blue-400"
-            rel="noreferrer"
-            style={{ color: "var(--tva-white)" }}
-          >
-            optimal
-          </a>{" "}
-          <span>via the</span>
-          <span className="transition-colors duration-300"> ceo's newsletter</span>
-        </p>
-      </footer>
+      
     </div>
   )
 }
