@@ -14,6 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script 
+          src="https://js.supascribe.com/v1/loader/FsksCIU8kNbnB8efDw7y3hLIDU12.js" 
+          async
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

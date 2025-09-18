@@ -548,7 +548,14 @@ export default function Component() {
           </div>
         </section>
       </div>
-      
+      {/* Supascribe Feed Embed */}
+      <div className="fixed bottom-4 right-4 z-50 max-w-sm">
+        <div 
+          data-supascribe-embed-id="567873680076" 
+          data-supascribe-feed
+          className="bg-black/10 backdrop-blur-sm rounded-lg p-2"
+        ></div>
+      </div>
     </div>
   )
 }
