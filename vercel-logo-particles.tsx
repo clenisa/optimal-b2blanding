@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { OPTIMAL_LOGO_PATH } from "./optimal-logo-path"
+import LiquidGlass from "liquid-glass-react"
 
 export default function Component() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -198,9 +199,11 @@ export default function Component() {
       />
 
       {/* Toggle button */}
-      <button onClick={toggleLogo} className="fixed bottom-4 right-4 z-50 btn-secondary px-4 py-2 transition-all">
-        {showContent ? "Show Logo" : "Hide Logo"}
-      </button>
+      <LiquidGlass onClick={toggleLogo} padding="10px 16px" cornerRadius={100} className="fixed bottom-4 right-4 z-50">
+        <span className="btn-secondary text-sm px-4 py-2 transition-all">
+          {showContent ? "Show Logo" : "Hide Logo"}
+        </span>
+      </LiquidGlass>
 
       {/* Header - always visible */}
       <header
@@ -235,12 +238,16 @@ export default function Component() {
             <a href="https://substack.com/@carloslenis" className="btn-ghost" aria-label="Access blog">
               <em>blog</em>
             </a>
-            <a href="https://legacy.op-hub.com" className="btn-waitlist px-4 py-2 text-sm">
-              See Live Demo
-            </a>
-            <a href="https://www.carloslenis.com/" className="btn-cta px-4 py-2 text-sm">
-              <span>Get Started for Free</span>
-            </a>
+            <LiquidGlass padding="8px 16px" cornerRadius={999}>
+              <a href="https://legacy.op-hub.com" className="btn-waitlist text-sm">
+                See Live Demo
+              </a>
+            </LiquidGlass>
+            <LiquidGlass padding="8px 16px" cornerRadius={999}>
+              <a href="https://www.carloslenis.com/" className="btn-cta text-sm">
+                <span>Get Started for Free</span>
+              </a>
+            </LiquidGlass>
           </div>
         </nav>
       </header>
@@ -289,30 +296,38 @@ export default function Component() {
             </div>
 
             <div className="features-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="feature-item card-minimal p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Smart Data Import</h3>
-                <p style={{ color: "var(--tva-white-muted)" }}>
-                  Seamlessly import your financial data through our intelligent CSV processor. Advanced validation ensures accuracy while automatic categorization saves you hours of manual work.
-                </p>
-              </div>
-              <div className="feature-item card-minimal p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Interactive Visualizations</h3>
-                <p style={{ color: "var(--tva-white-muted)" }}>
-                  Visualize your financial story through interactive charts and real-time analytics. Track spending patterns, monitor account performance, and identify opportunities for optimization.
-                </p>
-              </div>
-              <div className="feature-item card-minimal p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>AI Financial Assistant</h3>
-                <p style={{ color: "var(--tva-white-muted)" }}>
-                  Ask questions about your finances in natural language and receive intelligent, personalized recommendations. Our AI assistant analyzes your spending patterns to provide actionable insights for better financial decisions.
-                </p>
-              </div>
-              <div className="feature-item card-minimal p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Multi-Account Tracking</h3>
-                <p style={{ color: "var(--tva-white-muted)" }}>
-                  Consolidate all your financial accounts into a single, comprehensive dashboard. Monitor balances, track transactions, and maintain complete visibility across your entire financial ecosystem.
-                </p>
-              </div>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="feature-item card-minimal rounded-2xl">
+                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Smart Data Import</h3>
+                  <p style={{ color: "var(--tva-white-muted)" }}>
+                    Seamlessly import your financial data through our intelligent CSV processor. Advanced validation ensures accuracy while automatic categorization saves you hours of manual work.
+                  </p>
+                </div>
+              </LiquidGlass>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="feature-item card-minimal rounded-2xl">
+                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Interactive Visualizations</h3>
+                  <p style={{ color: "var(--tva-white-muted)" }}>
+                    Visualize your financial story through interactive charts and real-time analytics. Track spending patterns, monitor account performance, and identify opportunities for optimization.
+                  </p>
+                </div>
+              </LiquidGlass>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="feature-item card-minimal rounded-2xl">
+                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>AI Financial Assistant</h3>
+                  <p style={{ color: "var(--tva-white-muted)" }}>
+                    Ask questions about your finances in natural language and receive intelligent, personalized recommendations. Our AI assistant analyzes your spending patterns to provide actionable insights for better financial decisions.
+                  </p>
+                </div>
+              </LiquidGlass>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="feature-item card-minimal rounded-2xl">
+                  <h3 className="text-xl font-bold mb-3" style={{ color: "var(--tva-white)" }}>Multi-Account Tracking</h3>
+                  <p style={{ color: "var(--tva-white-muted)" }}>
+                    Consolidate all your financial accounts into a single, comprehensive dashboard. Monitor balances, track transactions, and maintain complete visibility across your entire financial ecosystem.
+                  </p>
+                </div>
+              </LiquidGlass>
             </div>
           </div>
         </section>
@@ -379,51 +394,53 @@ export default function Component() {
                 </div>
               </div>
 
-              <div className="card-minimal p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6" style={{ color: "var(--tva-white)" }}>
-                  what members are saying
-                </h3>
-                <div className="space-y-4">
-                  <div className="testimonial-card">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="testimonial-avatar">S</div>
-                      <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Sarah, 24</p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Marketing Coordinator</p>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="card-minimal rounded-2xl">
+                  <h3 className="text-2xl font-bold mb-6" style={{ color: "var(--tva-white)" }}>
+                    what members are saying
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="testimonial-card">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="testimonial-avatar">S</div>
+                        <div>
+                          <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Sarah, 24</p>
+                          <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Marketing Coordinator</p>
+                        </div>
                       </div>
+                      <p style={{ color: "var(--tva-white)" }}>
+                        "Saved $3,000 in two months by identifying spending patterns I never noticed before."
+                      </p>
                     </div>
-                    <p style={{ color: "var(--tva-white)" }}>
-                      "Saved $3,000 in two months by identifying spending patterns I never noticed before."
-                    </p>
-                  </div>
 
-                  <div className="testimonial-card">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="testimonial-avatar">M</div>
-                      <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Marcus, 28</p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Software Engineer</p>
+                    <div className="testimonial-card">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="testimonial-avatar">M</div>
+                        <div>
+                          <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Marcus, 28</p>
+                          <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Software Engineer</p>
+                        </div>
                       </div>
+                      <p style={{ color: "var(--tva-white)" }}>
+                        "Finally have complete visibility into my spending habits. The insights have been transformative."
+                      </p>
                     </div>
-                    <p style={{ color: "var(--tva-white)" }}>
-                      "Finally have complete visibility into my spending habits. The insights have been transformative."
-                    </p>
-                  </div>
 
-                  <div className="testimonial-card">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="testimonial-avatar">A</div>
-                      <div>
-                        <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Alex, 26</p>
-                        <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Graphic Designer</p>
+                    <div className="testimonial-card">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="testimonial-avatar">A</div>
+                        <div>
+                          <p className="font-medium text-sm" style={{ color: "var(--tva-white)" }}>Alex, 26</p>
+                          <p className="text-xs" style={{ color: "var(--tva-white-muted)" }}>Graphic Designer</p>
+                        </div>
                       </div>
+                      <p style={{ color: "var(--tva-white)" }}>
+                        "The community support has been invaluable. We're all working toward better financial futures together."
+                      </p>
                     </div>
-                    <p style={{ color: "var(--tva-white)" }}>
-                      "The community support has been invaluable. We're all working toward better financial futures together."
-                    </p>
                   </div>
                 </div>
-              </div>
+              </LiquidGlass>
             </div>
           </div>
         </section>
@@ -439,41 +456,49 @@ export default function Component() {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="card-minimal p-6 rounded-2xl">
-                <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  Mobile Optimized
-                </h3>
-                <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  Full functionality across all devices with responsive design
-                </p>
-              </div>
+              <LiquidGlass padding="20px" cornerRadius={20} className="w-full">
+                <div className="card-minimal rounded-2xl">
+                  <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                    Mobile Optimized
+                  </h3>
+                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                    Full functionality across all devices with responsive design
+                  </p>
+                </div>
+              </LiquidGlass>
 
-              <div className="card-minimal p-6 rounded-2xl">
-                <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  AI-Powered Insights
-                </h3>
-                <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  Intelligent recommendations tailored to your financial goals
-                </p>
-              </div>
+              <LiquidGlass padding="20px" cornerRadius={20} className="w-full">
+                <div className="card-minimal rounded-2xl">
+                  <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                    AI-Powered Insights
+                  </h3>
+                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                    Intelligent recommendations tailored to your financial goals
+                  </p>
+                </div>
+              </LiquidGlass>
 
-              <div className="card-minimal p-6 rounded-2xl">
-                <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  Enterprise Security
-                </h3>
-                <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  Your financial data is protected with enterprise-grade security
-                </p>
-              </div>
+              <LiquidGlass padding="20px" cornerRadius={20} className="w-full">
+                <div className="card-minimal rounded-2xl">
+                  <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                    Enterprise Security
+                  </h3>
+                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                    Your financial data is protected with enterprise-grade security
+                  </p>
+                </div>
+              </LiquidGlass>
 
-              <div className="card-minimal p-6 rounded-2xl">
-                <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  Real-Time Sync
-                </h3>
-                <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                  Seamless synchronization across all your devices
-                </p>
-              </div>
+              <LiquidGlass padding="20px" cornerRadius={20} className="w-full">
+                <div className="card-minimal rounded-2xl">
+                  <h3 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                    Real-Time Sync
+                  </h3>
+                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                    Seamless synchronization across all your devices
+                  </p>
+                </div>
+              </LiquidGlass>
             </div>
           </div>
         </section>
@@ -486,26 +511,30 @@ export default function Component() {
             </div>
 
             <div className="max-w-md mx-auto">
-              <div className="team-card">
-                <div className="team-avatar">CL</div>
-                <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                  Carlos Lenis
-                </h3>
-                <p className="text-lg mb-4" style={{ color: "var(--optimal-blue)" }}>
-                  CEO & Founder
-                </p>
-                <p className="leading-relaxed mb-6" style={{ color: "var(--tva-white-muted)" }}>
-                  Carlos founded Optimal to democratize sophisticated financial tools. Through his newsletter and platform, he helps thousands of users optimize their financial lives through data-driven insights and intelligent automation.
-                </p>
-                <a
-                  href="https://substack.com/@carloslenis"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-cta inline-block px-6 py-2 rounded-lg text-sm"
-                >
-                  <span>read the newsletter</span>
-                </a>
-              </div>
+              <LiquidGlass padding="24px" cornerRadius={20} className="w-full">
+                <div className="team-card">
+                  <div className="team-avatar">CL</div>
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                    Carlos Lenis
+                  </h3>
+                  <p className="text-lg mb-4" style={{ color: "var(--optimal-blue)" }}>
+                    CEO & Founder
+                  </p>
+                  <p className="leading-relaxed mb-6" style={{ color: "var(--tva-white-muted)" }}>
+                    Carlos founded Optimal to democratize sophisticated financial tools. Through his newsletter and platform, he helps thousands of users optimize their financial lives through data-driven insights and intelligent automation.
+                  </p>
+                  <LiquidGlass padding="10px 16px" cornerRadius={12}>
+                    <a
+                      href="https://substack.com/@carloslenis"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-cta inline-block rounded-lg text-sm"
+                    >
+                      <span>read the newsletter</span>
+                    </a>
+                  </LiquidGlass>
+                </div>
+              </LiquidGlass>
             </div>
 
             <div className="mt-16 text-center">
@@ -513,30 +542,36 @@ export default function Component() {
                 featured posts
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="card-minimal p-6 rounded-xl">
-                  <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                    coming soon
-                  </h4>
-                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                    featured newsletter posts will appear here
-                  </p>
-                </div>
-                <div className="card-minimal p-6 rounded-xl">
-                  <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                    coming soon
-                  </h4>
-                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                    featured newsletter posts will appear here
-                  </p>
-                </div>
-                <div className="card-minimal p-6 rounded-xl">
-                  <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
-                    coming soon
-                  </h4>
-                  <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
-                    featured newsletter posts will appear here
-                  </p>
-                </div>
+                <LiquidGlass padding="20px" cornerRadius={16} className="w-full">
+                  <div className="card-minimal rounded-xl">
+                    <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                      coming soon
+                    </h4>
+                    <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                      featured newsletter posts will appear here
+                    </p>
+                  </div>
+                </LiquidGlass>
+                <LiquidGlass padding="20px" cornerRadius={16} className="w-full">
+                  <div className="card-minimal rounded-xl">
+                    <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                      coming soon
+                    </h4>
+                    <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                      featured newsletter posts will appear here
+                    </p>
+                  </div>
+                </LiquidGlass>
+                <LiquidGlass padding="20px" cornerRadius={16} className="w-full">
+                  <div className="card-minimal rounded-xl">
+                    <h4 className="font-bold mb-2" style={{ color: "var(--tva-white)" }}>
+                      coming soon
+                    </h4>
+                    <p className="text-sm" style={{ color: "var(--tva-white-muted)" }}>
+                      featured newsletter posts will appear here
+                    </p>
+                  </div>
+                </LiquidGlass>
               </div>
             </div>
           </div>
@@ -554,12 +589,16 @@ export default function Component() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-cta text-lg px-8 py-4">
-                <span>Start Your Financial Transformation</span>
-              </button>
-              <Button variant="outline" size="lg" className="btn-secondary text-lg px-8 py-4 rounded-lg">
-                Explore the Platform
-              </Button>
+              <LiquidGlass padding="12px 24px" cornerRadius={12}>
+                <button className="btn-cta text-lg">
+                  <span>Start Your Financial Transformation</span>
+                </button>
+              </LiquidGlass>
+              <LiquidGlass padding="12px 24px" cornerRadius={12}>
+                <Button variant="outline" size="lg" className="btn-secondary text-lg rounded-lg">
+                  Explore the Platform
+                </Button>
+              </LiquidGlass>
             </div>
           </div>
         </section>
